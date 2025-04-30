@@ -96,7 +96,9 @@ files or folders. Do not enclose the %paths% macro in quotes because Open with++
 automatically when the macro is expanded, each path is enclosed in double quotation marks
 and separated by a space.
 
-To get the filename without extension for a single file there is a %filename-no-ext% variable.
+To get the filename without extension there is a %filename-no-ext% variable.
+
+To get the folder path there is a %folder% variable.
 
 Environment variables get expanded.
 

@@ -66,7 +66,6 @@ Public Class MainForm
     Friend WithEvents llInstallUninstall As LinkLabel
     Friend WithEvents llOptions As LinkLabel
     Friend WithEvents llWebsite As LinkLabel
-    Friend WithEvents llExport As LinkLabel
     Friend WithEvents laFilter As Label
     Friend WithEvents tbFilter As TextBox
     Friend WithEvents llAbout As LinkLabel
@@ -99,7 +98,6 @@ Public Class MainForm
         Me.llInstallUninstall = New System.Windows.Forms.LinkLabel()
         Me.llOptions = New System.Windows.Forms.LinkLabel()
         Me.llWebsite = New System.Windows.Forms.LinkLabel()
-        Me.llExport = New System.Windows.Forms.LinkLabel()
         Me.llAbout = New System.Windows.Forms.LinkLabel()
         Me.tlpSearch = New System.Windows.Forms.TableLayoutPanel()
         Me.bnFileTypes = New System.Windows.Forms.Button()
@@ -135,7 +133,7 @@ Public Class MainForm
         Me.bnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bnCancel.BackColor = System.Drawing.Color.WhiteSmoke
         Me.bnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.bnCancel.Location = New System.Drawing.Point(1274, 18)
+        Me.bnCancel.Location = New System.Drawing.Point(1132, 18)
         Me.bnCancel.Margin = New System.Windows.Forms.Padding(18)
         Me.bnCancel.Name = "bnCancel"
         Me.bnCancel.Size = New System.Drawing.Size(200, 75)
@@ -148,7 +146,7 @@ Public Class MainForm
         Me.bnOK.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.bnOK.BackColor = System.Drawing.Color.WhiteSmoke
         Me.bnOK.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.bnOK.Location = New System.Drawing.Point(1056, 18)
+        Me.bnOK.Location = New System.Drawing.Point(914, 18)
         Me.bnOK.Margin = New System.Windows.Forms.Padding(160, 0, 0, 0)
         Me.bnOK.Name = "bnOK"
         Me.bnOK.Size = New System.Drawing.Size(200, 75)
@@ -427,14 +425,13 @@ Public Class MainForm
         Me.FlowLayoutPanel1.Controls.Add(Me.llInstallUninstall)
         Me.FlowLayoutPanel1.Controls.Add(Me.llOptions)
         Me.FlowLayoutPanel1.Controls.Add(Me.llWebsite)
-        Me.FlowLayoutPanel1.Controls.Add(Me.llExport)
         Me.FlowLayoutPanel1.Controls.Add(Me.llAbout)
         Me.FlowLayoutPanel1.Controls.Add(Me.bnOK)
         Me.FlowLayoutPanel1.Controls.Add(Me.bnCancel)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(729, 1131)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(871, 1131)
         Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1492, 111)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1350, 111)
         Me.FlowLayoutPanel1.TabIndex = 18
         '
         'llInstallUninstall
@@ -476,25 +473,12 @@ Public Class MainForm
         Me.llWebsite.TabStop = True
         Me.llWebsite.Text = "Website"
         '
-        'llExport
-        '
-        Me.llExport.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.llExport.AutoSize = True
-        Me.llExport.LinkColor = System.Drawing.Color.DimGray
-        Me.llExport.Location = New System.Drawing.Point(627, 31)
-        Me.llExport.Margin = New System.Windows.Forms.Padding(10)
-        Me.llExport.Name = "llExport"
-        Me.llExport.Size = New System.Drawing.Size(122, 48)
-        Me.llExport.TabIndex = 3
-        Me.llExport.TabStop = True
-        Me.llExport.Text = "Export"
-        '
         'llAbout
         '
         Me.llAbout.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.llAbout.AutoSize = True
         Me.llAbout.LinkColor = System.Drawing.Color.DimGray
-        Me.llAbout.Location = New System.Drawing.Point(769, 31)
+        Me.llAbout.Location = New System.Drawing.Point(627, 31)
         Me.llAbout.Margin = New System.Windows.Forms.Padding(10)
         Me.llAbout.Name = "llAbout"
         Me.llAbout.Size = New System.Drawing.Size(117, 48)
@@ -1216,50 +1200,50 @@ Public Class MainForm
     End Sub
 
     Sub llAbout_Click(sender As Object, e As EventArgs) Handles llAbout.Click
-        MsgInfo(Application.ProductName + " " + Application.ProductVersion.ToString + BR2 + "Copyright (C) 2008-2021 Frank Skare (stax76)" + BR2 + "MIT License")
+        MsgInfo(Application.ProductName + " " + Application.ProductVersion.ToString + BR2 + "Copyright (C) 2008-2023 Frank Skare (stax76)" + BR2 + "MIT License")
     End Sub
 
-    Sub llExport_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llExport.LinkClicked
-        If Msg("Export to ContextMenuForWindows11?", "Export", MessageBoxIcon.Question, MessageBoxButtons.OKCancel) <> DialogResult.OK Then
-            Exit Sub
-        End If
+    'Sub llExport_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
+    '    If Msg("Export to ContextMenuForWindows11?", "Export", MessageBoxIcon.Question, MessageBoxButtons.OKCancel) <> DialogResult.OK Then
+    '        Exit Sub
+    '    End If
 
-        Dim items = TempItems
-        items.Sort()
+    '    Dim items = TempItems
+    '    items.Sort()
 
-        For Each i In items
-            i.FileTypes = SolveMacros(i.FileTypesDisplay)
-        Next
+    '    For Each i In items
+    '        i.FileTypes = SolveMacros(i.FileTypesDisplay)
+    '    Next
 
-        Dim folder = Environment.ExpandEnvironmentVariables("C:\Users\%USERNAME%\AppData\Local\Packages\7061touchwp.CustomContextMenu_1zgtmak8c0kvy\LocalState\custom_commands\")
+    '    Dim folder = Environment.ExpandEnvironmentVariables("C:\Users\%USERNAME%\AppData\Local\Packages\7061touchwp.CustomContextMenu_1zgtmak8c0kvy\LocalState\custom_commands\")
 
-        Try
-            Directory.CreateDirectory(folder)
-        Catch
-        End Try
+    '    Try
+    '        Directory.CreateDirectory(folder)
+    '    Catch
+    '    End Try
 
-        For Each i In g.Settings.Items
-            Dim json = "{" + BR +
-                "    ""title"": " + EscapeJSON(i.Name) + "," + BR +
-                "    ""exe"": " + EscapeJSON(i.Path) + "," + BR +
-                "    ""param"": " + EscapeJSON(i.Arguments.Replace("%paths%", """{path}""")) + "," + BR +
-                "    ""icon"": " + EscapeJSON(i.IconFile) + "," + BR +
-                "    ""acceptExts"": " + EscapeJSON((" " + i.FileTypes).Replace(" ", " .").Replace("*.*", "*")) + "," + BR +
-                "    ""acceptDirectory"": " + If(i.Directories, "true", "false") + "," + BR +
-                "    ""acceptFile"": " + If(i.FileTypes <> "", "true", "false") + "," + BR +
-                "    ""acceptMultipleFilesFlag"": 0," + BR +
-                "    ""pathDelimiter"": """"," + BR +
-                "    ""paramForMultipleFiles"": """"," + BR +
-                "    ""index"": 0" + BR + "}"
+    '    For Each i In g.Settings.Items
+    '        Dim json = "{" + BR +
+    '            "    ""title"": " + EscapeJSON(i.Name) + "," + BR +
+    '            "    ""exe"": " + EscapeJSON(i.Path) + "," + BR +
+    '            "    ""param"": " + EscapeJSON(i.Arguments.Replace("%paths%", """{path}""")) + "," + BR +
+    '            "    ""icon"": " + EscapeJSON(i.IconFile) + "," + BR +
+    '            "    ""acceptExts"": " + EscapeJSON((" " + i.FileTypes).Replace(" ", " .").Replace("*.*", "*")) + "," + BR +
+    '            "    ""acceptDirectory"": " + If(i.Directories, "true", "false") + "," + BR +
+    '            "    ""acceptFile"": " + If(i.FileTypes <> "", "true", "false") + "," + BR +
+    '            "    ""acceptMultipleFilesFlag"": 0," + BR +
+    '            "    ""pathDelimiter"": """"," + BR +
+    '            "    ""paramForMultipleFiles"": """"," + BR +
+    '            "    ""index"": 0" + BR + "}"
 
-            Try
-                File.WriteAllText(folder + i.Name + ".json", json)
-            Catch
-            End Try
-        Next
-    End Sub
+    '        Try
+    '            File.WriteAllText(folder + i.Name + ".json", json)
+    '        Catch
+    '        End Try
+    '    Next
+    'End Sub
 
-    Function EscapeJSON(value As String) As String
-        Return Web.Helpers.Json.Encode(value)
-    End Function
+    'Function EscapeJSON(value As String) As String
+    '    Return Web.Helpers.Json.Encode(value)
+    'End Function
 End Class
