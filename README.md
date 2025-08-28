@@ -2,6 +2,9 @@
 
 **openwith ++ but with dark theme!!**
 
+**Added feature :
+Ability to resize the main window** ✅
+
 Open with++ is a shell extension that allows to add command line driven
 custom menu items to the Windows File Explorer context menu.
 
