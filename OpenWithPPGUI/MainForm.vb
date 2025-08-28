@@ -658,14 +658,16 @@ Public Class MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(144.0!, 144.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
+        Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.ClientSize = New System.Drawing.Size(1110, 621)
         Me.Controls.Add(Me.tlpMain)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Open with++"
+        Me.Text = "Open with++ 4.0.0.0"
         Me.PropsFlowLayoutPanel.ResumeLayout(False)
         Me.tlpMain.ResumeLayout(False)
         Me.tlpMain.PerformLayout()
@@ -687,6 +689,23 @@ Public Class MainForm
     Private DLLPath As String = Path.Combine(Application.StartupPath, "OpenWithPPShellExtension.dll")
     Private BlockEvents As Boolean
 
+       Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    ' Taille pendant le développement
+    If System.Diagnostics.Debugger.IsAttached Then
+        Me.Size = New Size(1280, 720)
+        Me.MinimumSize = New Size(800, 600)
+        Me.MaximumSize = New Size(0, 0)  ' Pas de limite maximale
+    Else
+        ' EXE final : fenêtre initiale 1920x1080
+        Me.Size = New Size(1920, 1080)
+        Me.MinimumSize = New Size(0, 0)
+        Me.MaximumSize = New Size(0, 0)
+    End If
+
+    ' Centrer la fenêtre
+    Me.StartPosition = FormStartPosition.CenterScreen
+End Sub
+
 
 
     Sub New()
@@ -696,18 +715,7 @@ Public Class MainForm
 
 
 
-        ' Taille raisonnable pendant le développement
-        Me.Size = New Size(1280, 720)
-        Me.MinimumSize = New Size(800, 600)
-        Me.MaximumSize = New Size(0, 0)  ' Pas de limite maximale
-
-        ' Si l'application est compilée (exe final), forcer 1920x1080
-        If Not System.Diagnostics.Debugger.IsAttached Then
-            Me.Size = New Size(1920, 1080)
-            Me.MinimumSize = New Size(1920, 1080)
-            Me.MaximumSize = New Size(0, 0)
-        End If
-
+     
 
 
         AddHandler Application.ThreadException, AddressOf ApplicationThreadException
