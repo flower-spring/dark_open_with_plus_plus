@@ -1,8 +1,6 @@
 # Dark ! Open with++
 
-new release or tag soon 28 08 2025
-
-openwith ++ but with dark eme!!
+**openwith ++ but with dark theme!!**
 
 Open with++ is a shell extension that allows to add command line driven
 custom menu items to the Windows File Explorer context menu.
