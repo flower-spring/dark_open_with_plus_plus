@@ -2,8 +2,7 @@
 
 **openwith ++ but with dark theme!!**
 
-**Added feature :
-Ability to resize the main window** ✅
+**I added a functionality compared to the original version 4.0.0.0: Ability to resize the main window** ✅
 
 Open with++ is a shell extension that allows to add command line driven
 custom menu items to the Windows File Explorer context menu.
@@ -30,7 +29,6 @@ without dark theme : ⤵️
 download zip file. extract somechere. run dark_open_with_pp_gui_dark_theme.exe and click on install
 
 ![1756387656113](image/README/1756387656113.png)
-
 
 The requirements are Windows 7 x64 or higher, [.NET Framework 4.8 x64](https://dotnet.microsoft.com/download/dotnet-framework/net48) and [Visual C++ 2019 Redistributable x64](https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads).
 
