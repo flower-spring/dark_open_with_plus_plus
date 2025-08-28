@@ -1,10 +1,8 @@
 # Dark ! Open with++
 
-
 new release or tag soon 28 08 2025
 
-
-openwith ++ but with dark theme!!
+openwith ++ but with dark eme!!
 
 Open with++ is a shell extension that allows to add command line driven
 custom menu items to the Windows File Explorer context menu.
@@ -18,15 +16,20 @@ which is very similar to Open with++.
 
 ## Screenshots
 
+![1756387293327](image/README/1756387293327.png)
 
-![1756385654350](image/README/1756385654350.png)
+without dark theme : ⤵️
 
-
-![](https://raw.githubusercontent.com/stax76/OpenWithPlusPlus/master/img/Main.png)
+![img](https://raw.githubusercontent.com/stax76/OpenWithPlusPlus/master/img/Main.png)
 
 ![](https://raw.githubusercontent.com/stax76/OpenWithPlusPlus/master/img/Menu.png)
 
 ## Setup
+
+download zip file. extract somechere. run dark_open_with_pp_gui_dark_theme.exe and click on install
+
+![1756387656113](image/README/1756387656113.png)
+
 
 The requirements are Windows 7 x64 or higher, [.NET Framework 4.8 x64](https://dotnet.microsoft.com/download/dotnet-framework/net48) and [Visual C++ 2019 Redistributable x64](https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads).
 
