@@ -125,6 +125,8 @@ Public Class MainForm
         '
         Me.tbName.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tbName.BackColor = System.Drawing.Color.Black
+        Me.tbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tbName.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.tbName.ForeColor = System.Drawing.Color.White
         Me.tbName.Location = New System.Drawing.Point(423, 7)
         Me.tbName.Margin = New System.Windows.Forms.Padding(2, 5, 0, 5)
@@ -137,6 +139,7 @@ Public Class MainForm
         Me.bnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bnCancel.BackColor = System.Drawing.Color.RosyBrown
         Me.bnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.bnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.bnCancel.Location = New System.Drawing.Point(574, 9)
         Me.bnCancel.Margin = New System.Windows.Forms.Padding(9)
         Me.bnCancel.Name = "bnCancel"
@@ -150,6 +153,8 @@ Public Class MainForm
         Me.bnOK.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.bnOK.BackColor = System.Drawing.Color.Lime
         Me.bnOK.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.bnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bnOK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.bnOK.Location = New System.Drawing.Point(465, 9)
         Me.bnOK.Margin = New System.Windows.Forms.Padding(80, 0, 0, 0)
         Me.bnOK.Name = "bnOK"
@@ -162,6 +167,7 @@ Public Class MainForm
         '
         Me.tbPath.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tbPath.BackColor = System.Drawing.Color.DimGray
+        Me.tbPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tbPath.ForeColor = System.Drawing.Color.White
         Me.tbPath.Location = New System.Drawing.Point(423, 98)
         Me.tbPath.Margin = New System.Windows.Forms.Padding(2, 5, 0, 5)
@@ -173,6 +179,7 @@ Public Class MainForm
         '
         Me.tbArguments.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tbArguments.BackColor = System.Drawing.Color.Black
+        Me.tbArguments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tbArguments.ForeColor = System.Drawing.SystemColors.Window
         Me.tbArguments.HideSelection = False
         Me.tbArguments.Location = New System.Drawing.Point(423, 142)
@@ -193,17 +200,23 @@ Public Class MainForm
         '
         'cbSubmenu
         '
+
+        ' Me.cbSubmenu.UseVisualStyleBackColor = False
+        Me.cbSubmenu.BackColor = System.Drawing.Color.Black
+        Me.cbSubmenu.ForeColor = Color.White
         Me.cbSubmenu.Location = New System.Drawing.Point(12, 10)
         Me.cbSubmenu.Margin = New System.Windows.Forms.Padding(12, 10, 2, 2)
         Me.cbSubmenu.Name = "cbSubmenu"
         Me.cbSubmenu.Size = New System.Drawing.Size(300, 30)
         Me.cbSubmenu.TabIndex = 0
         Me.cbSubmenu.Text = "Show in sub menu"
+        Me.cbSubmenu.UseVisualStyleBackColor = False
         '
         'tbFileTypes
         '
         Me.tbFileTypes.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tbFileTypes.BackColor = System.Drawing.Color.Black
+        Me.tbFileTypes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tbFileTypes.ForeColor = System.Drawing.SystemColors.MenuBar
         Me.tbFileTypes.Location = New System.Drawing.Point(423, 52)
         Me.tbFileTypes.Margin = New System.Windows.Forms.Padding(2, 5, 0, 5)
@@ -238,7 +251,7 @@ Public Class MainForm
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lv.BackColor = System.Drawing.Color.Black
-        Me.lv.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.lv.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.lv.HideSelection = False
         Me.lv.Location = New System.Drawing.Point(9, 45)
         Me.lv.Margin = New System.Windows.Forms.Padding(9, 0, 0, 0)
@@ -252,6 +265,7 @@ Public Class MainForm
         '
         Me.tbSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tbSearch.BackColor = System.Drawing.Color.Black
+        Me.tbSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tbSearch.ForeColor = System.Drawing.SystemColors.Info
         Me.tbSearch.Location = New System.Drawing.Point(0, 7)
         Me.tbSearch.Margin = New System.Windows.Forms.Padding(0)
@@ -296,6 +310,8 @@ Public Class MainForm
         '
         Me.bnPath.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.bnPath.BackColor = System.Drawing.Color.LightSalmon
+        Me.bnPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bnPath.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.bnPath.Location = New System.Drawing.Point(1000, 95)
         Me.bnPath.Margin = New System.Windows.Forms.Padding(9, 4, 9, 4)
         Me.bnPath.Name = "bnPath"
@@ -308,6 +324,8 @@ Public Class MainForm
         '
         Me.bnArguments.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.bnArguments.BackColor = System.Drawing.Color.LightSalmon
+        Me.bnArguments.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bnArguments.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.bnArguments.Location = New System.Drawing.Point(1000, 166)
         Me.bnArguments.Margin = New System.Windows.Forms.Padding(9, 4, 9, 4)
         Me.bnArguments.Name = "bnArguments"
@@ -423,6 +441,7 @@ Public Class MainForm
         '
         Me.tbFilter.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tbFilter.BackColor = System.Drawing.Color.Black
+        Me.tbFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tbFilter.ForeColor = System.Drawing.SystemColors.Window
         Me.tbFilter.Location = New System.Drawing.Point(423, 337)
         Me.tbFilter.Margin = New System.Windows.Forms.Padding(2, 5, 0, 5)
@@ -520,6 +539,8 @@ Public Class MainForm
         '
         Me.bnFileTypes.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.bnFileTypes.BackColor = System.Drawing.Color.LightSalmon
+        Me.bnFileTypes.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bnFileTypes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.bnFileTypes.Location = New System.Drawing.Point(1000, 49)
         Me.bnFileTypes.Margin = New System.Windows.Forms.Padding(9, 4, 9, 4)
         Me.bnFileTypes.Name = "bnFileTypes"
@@ -532,6 +553,8 @@ Public Class MainForm
         '
         Me.bnWorkingDirectory.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.bnWorkingDirectory.BackColor = System.Drawing.Color.SandyBrown
+        Me.bnWorkingDirectory.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bnWorkingDirectory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.bnWorkingDirectory.Location = New System.Drawing.Point(1000, 240)
         Me.bnWorkingDirectory.Margin = New System.Windows.Forms.Padding(9, 4, 9, 4)
         Me.bnWorkingDirectory.Name = "bnWorkingDirectory"
@@ -544,6 +567,7 @@ Public Class MainForm
         '
         Me.tbWorkingDirectory.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tbWorkingDirectory.BackColor = System.Drawing.Color.Black
+        Me.tbWorkingDirectory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tbWorkingDirectory.ForeColor = System.Drawing.SystemColors.Menu
         Me.tbWorkingDirectory.HideSelection = False
         Me.tbWorkingDirectory.Location = New System.Drawing.Point(423, 243)
@@ -587,6 +611,7 @@ Public Class MainForm
         '
         Me.bnClone.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bnClone.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.bnClone.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.bnClone.Location = New System.Drawing.Point(210, 9)
         Me.bnClone.Margin = New System.Windows.Forms.Padding(9, 0, 0, 0)
         Me.bnClone.Name = "bnClone"
@@ -599,6 +624,7 @@ Public Class MainForm
         '
         Me.bnRemove.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bnRemove.BackColor = System.Drawing.Color.Brown
+        Me.bnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.bnRemove.Location = New System.Drawing.Point(95, 9)
         Me.bnRemove.Margin = New System.Windows.Forms.Padding(0)
         Me.bnRemove.Name = "bnRemove"
@@ -610,7 +636,8 @@ Public Class MainForm
         'bnAdd
         '
         Me.bnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bnAdd.BackColor = System.Drawing.Color.LightGreen
+        Me.bnAdd.BackColor = System.Drawing.Color.OliveDrab
+        Me.bnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.bnAdd.Location = New System.Drawing.Point(0, 9)
         Me.bnAdd.Margin = New System.Windows.Forms.Padding(0, 0, 9, 0)
         Me.bnAdd.Name = "bnAdd"
@@ -623,6 +650,8 @@ Public Class MainForm
         '
         Me.bnIcon.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.bnIcon.BackColor = System.Drawing.Color.SandyBrown
+        Me.bnIcon.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bnIcon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.bnIcon.Location = New System.Drawing.Point(1000, 288)
         Me.bnIcon.Margin = New System.Windows.Forms.Padding(9, 4, 9, 4)
         Me.bnIcon.Name = "bnIcon"
@@ -635,6 +664,7 @@ Public Class MainForm
         '
         Me.tbIcon.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tbIcon.BackColor = System.Drawing.Color.Black
+        Me.tbIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tbIcon.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.tbIcon.HideSelection = False
         Me.tbIcon.Location = New System.Drawing.Point(423, 291)
@@ -662,7 +692,7 @@ Public Class MainForm
         Me.ClientSize = New System.Drawing.Size(1110, 621)
         Me.Controls.Add(Me.tlpMain)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.Name = "MainForm"
@@ -689,43 +719,62 @@ Public Class MainForm
     Private DLLPath As String = Path.Combine(Application.StartupPath, "OpenWithPPShellExtension.dll")
     Private BlockEvents As Boolean
 
-       Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    ' Taille pendant le développement
-    If System.Diagnostics.Debugger.IsAttached Then
-        Me.Size = New Size(1280, 720)
-        Me.MinimumSize = New Size(800, 600)
-        Me.MaximumSize = New Size(0, 0)  ' Pas de limite maximale
-    Else
-        ' EXE final : fenêtre initiale 1920x1080
-        Me.Size = New Size(1920, 1080)
-        Me.MinimumSize = New Size(0, 0)
-        Me.MaximumSize = New Size(0, 0)
-    End If
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' lv.View = View.Details
+        ' lv.View = View.List
+        ' lv.Columns.Clear()
+        ' lv.Columns.Add("Nom", lv.Width - 4) ' une seule colonne qui prend toute la largeur
 
-    ' Centrer la fenêtre
-    Me.StartPosition = FormStartPosition.CenterScreen
-End Sub
+        ' Taille pendant le développement
+        If System.Diagnostics.Debugger.IsAttached Then
+            Me.Size = New Size(1280, 720)
+            Me.MinimumSize = New Size(800, 600)
+            Me.MaximumSize = New Size(0, 0)  ' Pas de limite maximale
+        Else
+            ' EXE final : fenêtre initiale 1920x1080
+            Me.Size = New Size(1920, 1080)
+            Me.MinimumSize = New Size(0, 0)
+            Me.MaximumSize = New Size(0, 0)
+        End If
+
+        ' Centrer la fenêtre
+        Me.StartPosition = FormStartPosition.CenterScreen
+    End Sub
 
 
 
     Sub New()
+  
         MyBase.New()
+             Me.Opacity = 0
+    '    Me.StartPosition = FormStartPosition.CenterScreen
+    '     Me.BackColor = Color.Black
+    ' Me.ForeColor = Color.White
         InitializeComponent()
-
-
-
-
+         Me.StartPosition = FormStartPosition.CenterScreen
      
+
+
+
+
+
 
 
         AddHandler Application.ThreadException, AddressOf ApplicationThreadException
 
         lv.View = View.Details
+        ' lv.View = View.List
+        ' lv.View = View.Tile
+        ' lv.View = View.List
+        ' lv.MultiColumn = false
+        ' lv.Scrollable = True
         lv.Columns.Add("")
         lv.HeaderStyle = ColumnHeaderStyle.None
         lv.MultiSelect = False
         lv.Sorting = SortOrder.Ascending
         lv.HideSelection = False
+        ' Me.lv.Width = CInt(Me.ClientSize.Width * 0.9)
+        ' Me.lv.Height = 520
 
         Native.HideFocus(lv.Handle)
         SetCue(tbSearch, "Search", False)
@@ -749,6 +798,11 @@ End Sub
         ' Native.SetWindowTheme(lv.Handle, "explorer", Nothing)
         Native.SetWindowTheme(lv.Handle, "DarkMode_Explorer", Nothing)
     End Sub
+
+'    Private Sub MainForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+'     ' Tout est prêt → on affiche sans flash
+'     Me.Opacity = 1
+' End Sub
 
     <STAThread()>
     Public Shared Sub Main()
@@ -923,11 +977,26 @@ End Sub
             tbFilter.Text = SelectedItem.Filter
             tbIcon.Text = SelectedItem.IconFile
 
+' cbSubmenu.FlatStyle = FlatStyle.Popup
+' cbSubmenu.UseVisualStyleBackColor = False
+' cbSubmenu.BackColor = Color.Black
+' cbSubmenu.ForeColor = Color.White
             cbSubmenu.Checked = SelectedItem.SubMenu
             cbDirectories.Checked = SelectedItem.Directories
+            ' cbDirectories.FlatStyle = FlatStyle.Popup
+            ' cbDirectories.UseVisualStyleBackColor = False
+            ' cbDirectories.ForeColor = Color.White
+            '  cbRunAsAdmin.FlatStyle = FlatStyle.Popup
             cbRunAsAdmin.Checked = SelectedItem.RunAsAdmin
+            ' cbRunAsAdmin.ForeColor = Color.White
+            '  cbHideWindow.FlatStyle = FlatStyle.Popup
             cbHideWindow.Checked = SelectedItem.HideWindow
+            ' cbHideWindow.ForeColor = Color.White
+            '  cbHidden.FlatStyle = FlatStyle.Popup
             cbHidden.Checked = SelectedItem.Hidden
+            ' cbHidden.ForeColor = Color.White
+
+
 
             If SelectedItem.FileTypesDisplay = "" Then
                 tbFileTypes.Text = SelectedItem.FileTypes
@@ -963,6 +1032,10 @@ End Sub
             laName.Enabled = False
             laPath.Enabled = False
 
+cbSubmenu.FlatStyle = FlatStyle.Flat
+cbSubmenu.UseVisualStyleBackColor = False
+cbSubmenu.BackColor = Color.Black
+cbSubmenu.ForeColor = Color.White
             cbDirectories.Checked = False
             cbSubmenu.Checked = False
             cbRunAsAdmin.Checked = False
@@ -1068,6 +1141,7 @@ End Sub
     Sub MainForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         tbSearch.Focus()
         tbArguments.HideSelection = True
+          Me.Opacity = 1
     End Sub
 
     Sub llWebsite_Click(sender As Object, e As EventArgs) Handles llWebsite.Click

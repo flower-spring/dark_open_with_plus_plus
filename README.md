@@ -18,7 +18,7 @@ which is very similar to Open with++.
 
 ## Screenshots
 
-![1756387293327](image/README/1756387293327.png)
+![1756447363311](image/README/1756447363311.png)
 
 without dark theme : ⤵️
 
